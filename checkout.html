@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Complete your Aurelia Atelier order." />
+  <title>Checkout — AURELIA ATELIER</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="checkout.css" />
+</head>
+<body class="checkout-page">
+  <div class="announcement">Complimentary worldwide delivery on orders over $150 <span>↗</span></div>
+  <header class="site-header checkout-header">
+    <a class="logo" href="index.html">AURELIA<span>ATELIER</span></a>
+    <a class="back-link" href="index.html">← Continue shopping</a>
+  </header>
+
+  <main class="checkout-main">
+    <div class="checkout-heading"><p class="eyebrow">Secure checkout / 03</p><h1>Complete your order.</h1><p>This is a demo checkout — no payment will be processed.</p></div>
+    <div class="checkout-layout">
+      <form class="checkout-form" id="checkout-form">
+        <section class="checkout-section"><div class="section-title"><span>01</span><h2>Contact</h2></div><label>Email address<input type="email" name="email" placeholder="you@example.com" required /></label><label class="check-row"><input type="checkbox" /> Email me with news and exclusive releases</label></section>
+        <section class="checkout-section"><div class="section-title"><span>02</span><h2>Delivery</h2></div><div class="form-grid"><label>First name<input name="firstName" required /></label><label>Last name<input name="lastName" required /></label></div><label>Address<input name="address" required /></label><div class="form-grid three"><label>City<input name="city" required /></label><label>State / region<input name="region" required /></label><label>Postal code<input name="postal" required /></label></div><label>Country<select name="country"><option>United States</option><option>Canada</option><option>United Kingdom</option><option>Australia</option></select></label></section>
+        <section class="checkout-section"><div class="section-title"><span>03</span><h2>Payment</h2></div><div class="demo-notice">✦ Demo mode — enter any details to preview the confirmation.</div><label>Card number<input inputmode="numeric" placeholder="4242 4242 4242 4242" required /></label><div class="form-grid"><label>Expiration date<input placeholder="MM / YY" required /></label><label>Security code<input placeholder="CVC" required /></label></div></section>
+        <button class="place-order" type="submit">Place demo order <span>↗</span></button>
+      </form>
+      <aside class="order-summary"><p class="eyebrow">Your selection</p><h2>Order summary</h2><div id="summary-items"></div><div class="summary-line"><span>Subtotal</span><strong id="subtotal">$0</strong></div><div class="summary-line"><span>Shipping</span><strong id="shipping">Free</strong></div><div class="summary-total"><span>Total</span><strong id="total">$0</strong></div><p class="summary-note">All orders are thoughtfully packed and dispatched within 2–3 business days.</p></aside>
+    </div>
+  </main>
+  <footer class="checkout-footer"><span>© 2024 Aurelia Atelier</span><span>Demo store · No payment is processed</span></footer>
+  <div class="confirmation" id="confirmation" aria-live="polite"><div class="confirmation-card"><span class="confirmation-mark">✓</span><p class="eyebrow">Order received</p><h2>Thank you for your order.</h2><p>Your demo order <strong id="order-number"></strong> has been placed. No payment was taken.</p><a class="button button-dark" href="index.html">Return to the atelier <span>↗</span></a></div></div>
+  <script src="checkout.js"></script>
+</body>
+</html>

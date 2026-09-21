@@ -1,12 +1,14 @@
 const countElement = document.querySelector('#cart-count');
 const toast = document.querySelector('#toast');
-let cartCount = 0;
+let cart = JSON.parse(localStorage.getItem('aureliaCart') || '[]');
 let toastTimer;
+if (countElement) countElement.textContent = cart.length;
 
 document.querySelectorAll('.add-button').forEach((button) => {
   button.addEventListener('click', () => {
-    cartCount += 1;
-    countElement.textContent = cartCount;
+    cart.push({ name: button.dataset.product, price: Number(button.dataset.price) });
+    localStorage.setItem('aureliaCart', JSON.stringify(cart));
+    countElement.textContent = cart.length;
     toast.firstChild.textContent = `${button.dataset.product} added to your bag `;
     toast.classList.add('show');
     clearTimeout(toastTimer);
@@ -14,6 +16,7 @@ document.querySelectorAll('.add-button').forEach((button) => {
   });
 });
 
+document.querySelector('.cart-button').addEventListener('click', () => { window.location.href = 'checkout.html'; });
 document.querySelector('#newsletter-form').addEventListener('submit', (event) => {
   event.preventDefault();
   const message = document.querySelector('#form-message');
@@ -21,7 +24,4 @@ document.querySelector('#newsletter-form').addEventListener('submit', (event) =>
   message.style.color = '#66856a';
   event.target.reset();
 });
-
-document.querySelector('.menu-button').addEventListener('click', () => {
-  document.querySelector('.main-nav').classList.toggle('mobile-open');
-});
+document.querySelector('.menu-button').addEventListener('click', () => document.querySelector('.main-nav').classList.toggle('mobile-open'));
