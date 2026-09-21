@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Graphic Hoodie — AURELIA ATELIER</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="custom.css" />
+</head>
+<body class="custom-page">
+  <div class="announcement">Complimentary worldwide delivery on orders over $150 <span>↗</span></div>
+  <header class="site-header"><a class="logo" href="index.html">AURELIA<span>ATELIER</span></a><a class="back-link" href="index.html">← Back to collection</a></header>
+  <main class="custom-main">
+    <div class="custom-heading"><p class="eyebrow">The atelier / custom studio</p><h1>Make it<br /><em>yours.</em></h1><p>Design a one-of-one graphic hoodie on our 512 × 512 pixel canvas. Your artwork is saved with your demo order.</p></div>
+    <div class="studio-layout">
+      <section class="canvas-panel"><div class="canvas-wrap"><canvas id="paint-canvas" width="512" height="512" aria-label="512 by 512 custom hoodie artwork canvas"></canvas><span class="canvas-size">512 × 512 px</span></div><div class="canvas-actions"><button id="undo-button" type="button">Undo</button><button id="clear-button" type="button">Clear canvas</button><button id="download-button" type="button">Download PNG ↗</button></div></section>
+      <section class="controls-panel"><div class="control-group"><label for="color">Ink color</label><input id="color" type="color" value="#1e1c1a" /></div><div class="control-group"><label for="brush-size">Brush size <output id="brush-value">18 px</output></label><input id="brush-size" type="range" min="2" max="80" value="18" /></div><div class="tool-row"><button class="tool-button active" data-tool="brush" type="button">Brush</button><button class="tool-button" data-tool="eraser" type="button">Eraser</button></div><div class="design-note"><span>✦</span><p>Keep important artwork inside the canvas edges. The artwork will be printed on the front of your custom hoodie.</p></div><div class="custom-price"><div><span>Custom Graphic Hoodie</span><small>Black / heavyweight cotton</small></div><strong>$198</strong></div><button class="custom-buy" id="custom-buy" type="button">Buy custom hoodie <span>↗</span></button><p class="demo-note">Demo experience — no real payment is processed.</p></section>
+    </div>
+  </main>
+  <script src="custom.js"></script>
+</body>
+</html>
